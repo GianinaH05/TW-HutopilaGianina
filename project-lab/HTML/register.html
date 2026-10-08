@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/register_style.css">
+</head>
+
+<body>
+    <main class="page">
+        <section class="card">
+            <h1>Înregistrează-te</h1>
+            <form class="register-form" action="#" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <label for="username">Nume utilizator</label>
+                    <input type="text" name="username" placeholder="ex: maria92" required>
+                </div>
+                <div class="row">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="ex: nume@exemplu.com" required>
+                </div>
+                <div class="two-col">
+                    <div class="row">
+                        <label for="password">Parolă</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="row">
+                        <label for="confirm_password">Confirmă parola</label>
+                        <input type="password" name="confirm_password" required>
+                    </div>
+                </div>
+                <div class="gen">
+                    <p>Gen</p>
+                    <label for="gen">Femeie</label>
+                    <input type="radio" id="femeie" name="gen"><br>
+                    <label for="barbat">Bărbat</label>
+                    <input type="radio" id="barbat" name="gen"><br>
+                    <label for="altul">Altul</label>
+                    <input type="radio" id="altul" name="gen">
+                </div>
+                <div class="tip">
+                    <label for="cont">Tip cont:</label>
+                    <select name="cont">
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+                <div class="interese">
+                    <p>Interese</p>
+                    <label for="frontend">Frontend</label>
+                    <input type="checkbox" name="frontend"><br>
+                    <label for="backend">Backend</label>
+                    <input type="checkbox" name="backend"> <br>
+                    <label for="ux">UX/UI</label>
+                    <input type="checkbox" name="ux"> <br>
+                    <label for="java">JavaScript</label>
+                    <input type="checkbox" name="java"> <br>
+                    <label for="python">Python Web</label>
+                    <input type="checkbox" name="python"> <br>
+                    <label for="word">WordPress</label>
+                    <input type="checkbox" name="word"> <br>
+                    <label for="django">Django</label>
+                    <input type="checkbox" name="django"> <br>
+
+                </div>
+                <div class="avatar">
+                    <label for="avatar">Încarcă avatar</label>
+                    <input type="file">
+                </div>
+                <div class="descriere">
+                    <label for="descriere">Scurtă descriere</label>
+                    <input type="text" name="descriere">
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn primary">Creare cont</button>
+                    <button type="reset" class="btn ghost">Resetare</button>
+                </div>
+                <p class="login-link"> Ai deja cont?
+
+                    <a href="login.html">Mergi la login</a>
+                </p>
+
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
