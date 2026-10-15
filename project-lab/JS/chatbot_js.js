@@ -22,31 +22,23 @@ let questions = [
         incorrectResponse: "O să găsim soluții împreună, nu-ți face griji"
     }
 ];
-
 let currentQuestionIndex = 0;
 let chatContainer = document.getElementById("chat-container");
 let chatForm = document.getElementById("chat-form");
-let userInput = document.getElementById("user-input"); // Fixed typo: userInputinput -> userInput
-
+let userInput = document.getElementById("user-input");
 displayQuestion();
-
 function displayQuestion() {
     let currentQuestion = questions[currentQuestionIndex];
-    let optionsHTML = Object.keys(currentQuestion.options)
-        .map(key => `${key}. ${currentQuestion.options[key]}`)
-        .join(" | ");
-        
+    let optionsHTML = Object.keys(currentQuestion.options).map(key => `${key}. ${currentQuestion.options[key]}`).join(" | ");  
     let botResponse = document.createElement("div");
     botResponse.classList.add("message");
     botResponse.innerHTML = `<strong>Bot:</strong> ${currentQuestion.question}<br>${optionsHTML}`;
     chatContainer.appendChild(botResponse);
     scrollChatContainerToBottom();
 }
-
 function scrollChatContainerToBottom() {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
-
 chatForm.addEventListener("submit", function (event) {
     event.preventDefault();
     let userResponse = userInput.value.toLowerCase().trim();
@@ -55,7 +47,6 @@ chatForm.addEventListener("submit", function (event) {
     userMessage.classList.add("message");
     userMessage.innerHTML = `<strong>You:</strong> ${userResponse}`;
     chatContainer.appendChild(userMessage);
-
     let currentQuestion = questions[currentQuestionIndex];
     let botResponse = document.createElement("div");
     botResponse.classList.add("message");
@@ -65,13 +56,11 @@ chatForm.addEventListener("submit", function (event) {
     } else {
         botResponse.innerHTML += currentQuestion.incorrectResponse;
     }
-
     chatContainer.appendChild(botResponse);
     currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
     userInput.value = "";
-
     setTimeout(() => {
-        displayQuestion();
+displayQuestion();
         scrollChatContainerToBottom();
     }, 800);
 });
