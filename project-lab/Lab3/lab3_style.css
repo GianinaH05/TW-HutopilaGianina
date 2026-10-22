@@ -1,0 +1,98 @@
+.card-a {
+    box-sizing: content-box;
+    padding: 20px;
+    width: 30px;
+    border: 30px;
+    background-color: olivedrab;
+    color: black
+}
+
+.card-b {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 30px;
+    border: 30px;
+    background-color: orangered;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(162, 116, 15);
+}
+
+body {
+    background-color: chartreuse;
+    font-size: 16px;
+}
+
+.card {
+    background-color: #84001f;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 1rem;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    body {
+        background-color: chartreuse;
+    }
+}
+
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    body {
+        background-color: aquamarine;
+    }
+}
+
+.important {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * 1rem);
+  margin-right: calc(-0.5 * 1rem);
+  margin-left: calc(-0.5 * 1rem);
+}
+
+.row.g-3 > * {
+  padding-right: calc(1rem * 0.5);
+  padding-left: calc(1rem * 0.5);
+  margin-top: 1rem;
+}
+
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
